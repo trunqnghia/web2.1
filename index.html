@@ -1,0 +1,104 @@
+# web2.1
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phân tích thành phần URL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    .url-box {
+      background-color: #eef2f7;
+      border-left: 5px solid #3498db;
+      padding: 15px;
+      margin: 20px 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      font-size: 1.1em;
+      word-break: break-all;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .component-name {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Công cụ phân tích thành phần URL</h1>
+  <p>Dưới đây là kết quả phân tích chi tiết các thành phần cấu tạo nên một đường dẫn URL tiêu chuẩn.</p>
+
+  <p><strong>URL mẫu:</strong></p>
+  <div class="url-box">
+    https://example.com/products/list?page=2#top
+  </div>
+
+  <h3>Danh sách các thành phần phân tích:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Thành phần (Component)</th>
+        <th>Giá trị tách bóc (Value)</th>
+        <th>Ý nghĩa (Description)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="component-name">Protocol (Giao thức)</td>
+        <td><code>https</code></td>
+        <td>Phương thức truyền tải dữ liệu an toàn giữa trình duyệt và server.</td>
+      </tr>
+      <tr>
+        <td class="component-name">Domain (Tên miền)</td>
+        <td><code>example.com</code></td>
+        <td>Địa chỉ định danh của trang web trên mạng Internet.</td>
+      </tr>
+      <tr>
+        <td class="component-name">Path (Đường dẫn)</td>
+        <td><code>/products/list</code></td>
+        <td>Vị trí hoặc tài nguyên cụ thể đang được truy cập trên server.</td>
+      </tr>
+      <tr>
+        <td class="component-name">Query (Tham số truy vấn)</td>
+        <td><code>page=2</code></td>
+        <td>Dữ liệu gửi kèm lên server (thường dùng để lọc, phân trang).</td>
+      </tr>
+      <tr>
+        <td class="component-name">Fragment (Thẻ neo)</td>
+        <td><code>#top</code></td>
+        <td>Định vị đến một vùng/vị trí cụ thể bên trong trang HTML hiện tại.</td>
+      </tr>
+    </tbody>
+  </table>
